@@ -23,6 +23,7 @@
     linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black, transparent);
   mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black, transparent);
   pointer-events: none;
 }
@@ -79,6 +80,11 @@
   gap: var(--spacing-4);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Default primary-500 focus ring lacks 3:1 contrast on the dark hero */
+.hero__actions .btn:focus-visible {
+  outline-color: white;
 }
 
 .hero__actions .btn--primary {
